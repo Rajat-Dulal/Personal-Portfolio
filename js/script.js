@@ -137,9 +137,16 @@ function scrollActive() {
 
 window.addEventListener("scroll", scrollActive);
 
-// Add touch support for project cards
+
+// Add touch support for project cards with single hover at a time on mobile
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('touchstart', () => {
-        card.classList.toggle('hover-active');
+        // Remove hover-active class from all project cards
+        document.querySelectorAll('.project-card').forEach(c => {
+            c.classList.remove('hover-active');
+        });
+
+        // Add hover-active class to the tapped project card
+        card.classList.add('hover-active');
     });
 });
