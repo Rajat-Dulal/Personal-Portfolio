@@ -20,7 +20,7 @@ toggleSwitch.addEventListener("click", ()=> {
 // Typing Effect
 
 var typingEffect = new Typed(".typedText", {
-    strings: ["Electronics, Communication and Information Engineer", "AI Researcher" , "Data Scientist", "Software Developer"],
+    strings: ["Electronics, Communication and Information Engineer", "AI/ML Engineer" , "Data Scientist", "Software Developer"],
 
     loop: true,
     typeSpeed: 100,
@@ -55,6 +55,8 @@ sr.reveal(".featured-name", { delay: 100 });
 sr.reveal(".text-info", { delay: 200 });
 sr.reveal(".text-btn", { delay: 200 });
 sr.reveal(".social_icons", { delay: 200 });
+sr.reveal(".project-container", { delay: 200 });
+sr.reveal(".see-more", { delay: 200 });
 sr.reveal(".featured-image", { delay: 320 });
 
 
@@ -73,15 +75,38 @@ srLeft.reveal(".about-info", { delay: 100});
 srLeft.reveal(".contact-info", { delay: 100});
 
 
-const srRight = ScrollReveal({
-    origin: "left",
-    distance: "80px",
-    duration: 2000,
-    reset: true,
-})
+// Scroll Animation for Tab Content
+const srTabContent = ScrollReveal({
+    origin: "right", // Animation starts from the right
+    distance: "80px", // Adjust the distance as needed
+    duration: 2000, // Adjust the duration as needed
+    reset: true, // Animation resets when out of view
+});
 
-srRight.reveal(".skill", { delay: 100});
-srRight.reveal(".skill-box", { delay: 100});
+srTabContent.reveal("#skills.tab-content", { delay: 100});
+srTabContent.reveal(".form-control", { delay: 100});
+
+
+
+
+//Switch between skill, education and Experience
+
+function openTab(tabName) {
+    var i;
+    var x = document.getElementsByClassName("tab-content");
+    var buttons = document.getElementsByClassName("tab-button");
+    
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    
+    for (i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("active");
+    }
+    
+    document.getElementById(tabName).style.display = "block";
+    event.currentTarget.classList.add("active");
+}
 
 // Active Link
 

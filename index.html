@@ -64,7 +64,7 @@
                     <div class="text-btn">
                         <button class="btn hire-btn" onclick="composeEmail()">Hire me</button>
                         <!-- <button class="btn hire-btn">Hire me</button> -->
-                        <a href="https://drive.google.com/uc?export=download&id=1PBVXvB3G3z7CnRO4jlwpjFC7p7nxje4i" target="_blank" rel="noopener noreferrer" download="your-cv-name.pdf">
+                        <a href="https://drive.google.com/file/d/1sm7bkUd_I7I8cbtOBX2q43tKAK-F8K0T/view?usp=drive_link" target="_blank" rel="noopener noreferrer" download="your-cv-name.pdf">
                             <button class="btn">Download CV<i class="uil uil-file"></i></button>
                         </a>
                         <!-- <button class="btn">Download CV<i class="uil uil-file"></i></button> -->
@@ -120,58 +120,44 @@
                                         But it's also a window into my world of curiosity, where code meets sunsets, and challenges become adventures. 
                                         So, feel free to look, explore, and maybe we'll connect along the way!</p>                        
                             </figure>
-                            <button class="about-me-btn">Hire Me</button>
+                            <button class="about-me-btn" onclick="composeEmail()">Hire me</button>
                         </div>
                     </div>
-                    <div class="skill">
-                        <div class="skill-box">
-                            <span class="title">HTML</span>
-                            <div class="skill-bar">
-                                <span class="skill-per html">
-                                    <span class="tooltip">80%</span>
-                                </span>
-                            </div>
+                    <div class="col">
+                        <div class="tabs">
+                            <button class="tab-button active" onclick="openTab('skills')">Skills</button>
+                            <button class="tab-button" onclick="openTab('education')">Education</button>
+                            <button class="tab-button" onclick="openTab('experience')">Experience</button>
                         </div>
-                        <div class="skill-box">
-                            <span class="title">CSS</span>
-                            <div class="skill-bar">
-                                <span class="skill-per css">
-                                    <span class="tooltip">50%</span>
-                                </span>
-                            </div>
+                        <div class="tab-content" id="skills">
+                            <h2>Programming Languages</h2>
+                            <p>Python | R | C++</p>
+                            <h2>Machine Learning Frameworks</h2>
+                            <p>Pytorch | Tensorflow</p>
+                            <h2>Database Management</h2>
+                            <p>MySQL | SQL Server</p>
+                            <h2>Deep Learning</h2>
+                            <p>Generative AI | NLP | CNNs | RNNs | Computer Vision</p>
+                            <h2>Web development</h2>
+                            <p>HTML | CSS | Javascript</p>
                         </div>
-                        <div class="skill-box">
-                            <span class="title">Python</span>
-                            <div class="skill-bar">
-                                <span class="skill-per python">
-                                    <span class="tooltip">80%</span>
-                                </span>
-                            </div>
+                        <div class="tab-content" id="education" style="display:none;">
+                            <h2>Bachelor's in Electronics and Communication Engineering</h2>
+                            <p>Thapathali Campus, Kathmandu</p>
+                            <h2>High School (+2)</h2>
+                            <p>V.S. Niketan, Kathmandu</p>
+
                         </div>
-                        <div class="skill-box">
-                            <span class="title">JavaScript</span>
-                            <div class="skill-bar">
-                                <span class="skill-per javascript">
-                                    <span class="tooltip">40%</span>
-                                </span>
-                            </div>
+                        <div class="tab-content" id="experience" style="display:none;">
+                            <h2>AI/ML Engineer</h2>
+                            <p>Icebrkr AI Solutions Pvt. Ltd, Kalanki</p>
+                            <h2>AI Fellow</h2>
+                            <p>Fusemachines</p>
+                            <h2>Executive Member, ECAST</h2>
+                            <p>Thapathali</p>
+                            <h2>Vice-President</h2>
+                            <p>VSN Innovators’ Club, Tinkune</p>
                         </div>
-                        <div class="skill-box">
-                            <span class="title">PHP</span>
-                            <div class="skill-bar">
-                                <span class="skill-per php">
-                                    <span class="tooltip">10%</span>
-                                </span>
-                            </div>
-                        </div>
-                        <!-- <div class="skill-box">
-                            <span class="title"></span>
-                            <div class="skill-bar">
-                                <span class="skill-per">
-                                    <span class="tooltip"></span>
-                                </span>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </section>
@@ -182,23 +168,45 @@
                     <h1>Projects</h1>
                 </div>
                 <div class="project-container">
-                    <div class="project-box">
-                        <i class="uil uil-briefcase-alt"></i>
-                        <h3>Completed</h3>
-                        <label>10+ Finished Projects</label>
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image" style="background-image: url('./image/project1.png');">
+                            <div class="project-hover">
+                                <h3>Puzzle Flow</h3>
+                                <p>This project focuses on solving jigsaw-like puzzles with identical square pieces using generative model and ViT.</p>
+                                <a href="https://github.com/your-repo-link" target="_blank" class="project-link">
+                                    <i class="uil uil-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-box">
-                        <i class="uil uil-users-alt"></i>
-                        <h3>Clients</h3>
-                        <!-- <label>70+ Happy Clients</label> -->
-                        <label>Searching for Clients</label>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image" style="background-image: url('./image/project2.png');">
+                            <div class="project-hover">
+                                <h3>An Electronic Watchdog</h3>
+                                <p>This project is a combination of hardware and sofware for home security using AI based face recognition algorithm. </p>
+                                <a href="https://github.com/Rajat-Dulal/An_Electronic_Watch_Dog" target="_blank" class="project-link">
+                                    <i class="uil uil-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-box">
-                        <i class="uil uil-award"></i>
-                        <h3>Experience</h3>
-                        <!-- <label>3+ Years in web development</label> -->
-                        <label>1+ Years in AI Field</label>
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-image" style="background-image: url('./image/project3.png');">
+                            <div class="project-hover">
+                                <h3>EmpowerLip</h3>
+                                <p>This project is a computer vision model for transcribing the text from videos of human talking by observing the patterns in lip movement.  </p>
+                                <a href="https://github.com/Rajat-Dulal/LipReading-OpenCV" target="_blank" class="project-link">
+                                    <i class="uil uil-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="see-more">
+                    <a href="https://github.com/Rajat-Dulal" target="_blank">See more</a>
                 </div>
             </section>
 
