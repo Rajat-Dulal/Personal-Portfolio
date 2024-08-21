@@ -569,6 +569,14 @@ i{
     text-decoration: none;
 }
 
+.project-card.hover-active .project-hover {
+    opacity: 1;
+}
+
+.project-card.hover-active .project-image {
+    transform: scale(1.1);
+}
+
 .see-more {
     margin-top: 20px;
     text-align: center;

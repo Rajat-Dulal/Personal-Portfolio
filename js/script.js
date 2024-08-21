@@ -136,3 +136,10 @@ function scrollActive() {
 }
 
 window.addEventListener("scroll", scrollActive);
+
+// Add touch support for project cards
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('touchstart', () => {
+        card.classList.toggle('hover-active');
+    });
+});
